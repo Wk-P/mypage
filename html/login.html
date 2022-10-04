@@ -2,27 +2,31 @@
 <html>
     <head>
         <meta charset="登录" target="_blank">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <title>登录/注册</title>
     </head>
     <body>
         <div class="default" id="center_block">
+            <form id="form">
             <div class="text_block">
                 <div>
                     <p><span>用户名</span></p><br>
                 </div>
                 <div>
-                    <input class="input">
+                    <input class="input" id="username" name="username">
                 </div>
             </div>
             <div class="text_block">
                 <p><span>密码</span></p><br>
-                <input class="input">
+                <input class="input" id="password" name="password">
             </div>
+            </form>
             <div name="buttons">
-                <button id="b1" class="btn">登录</button>
+                <button id="b1" class="btn" type="submit">登录</button>
                 <button id="b2" class="btn">注册</button>
             </div>
         </div>
     </body>
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
 </html>

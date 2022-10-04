@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: cover;
+    background-image: url("../img/register/roudao.png");
+    width: 100%;
+}
+
+body div {
+    margin: 20% auto 0 auto;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 20px;
+    color:white;
+    background-color: rgba(12, 154, 73, 0.76);
+    transition: all 0.2s ease 0s;
+}
+
+body div:hover {
+    cursor: pointer;
+    line-height: 200px;
+    height: 200px;
+}
