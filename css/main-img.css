@@ -38,7 +38,6 @@
 }
 
 #left{
-    color: white;
     width: 15%;
     height: 100%;
     position: relative;
@@ -47,7 +46,6 @@
 }
 
 #right{
-    color: white;
     height: 100%;
     width:15%;
     position: relative;
@@ -56,12 +54,15 @@
 }
 
 button {
+    color: rgb(27, 194, 255);
     position: relative;
     font-size: 40px;
     background: none;
 }
 
 button:hover {
+    transition: all 0.5s ease 0s;
+    color:white;
     cursor:pointer;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
