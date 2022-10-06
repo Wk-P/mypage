@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/register.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -25,17 +26,19 @@
                     <div class="tips">邮箱</div>
                 </div>
                 <div class="right">
-                    <input class="text_input" name="username">
-                    <input class="text_input" name="password1" type="password">
-                    <input class="text_input" name="possowrd2" type="password">
-                    <input class="text_input" name="email" type="email">
-                </div>
+                    <form id="form">
+                        <input class="text_input" name="username">
+                        <input class="text_input" name="password1" type="password">
+                        <input class="text_input" name="password2" type="password">
+                        <input class="text_input" name="email" type="email">
+                    </form>
+            </div>
             </div>
             <div class="down">
                 <button id="submit" type="submit">Submit</button>
                 <button id="cancel">Cancel</button>
             </div>
         </div>
-        <script src="" async defer></script>
+        <script src="../js/register.js" async defer></script>
     </body>
 </html>
