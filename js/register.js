@@ -1,7 +1,7 @@
 const cancel_url = "./login.html";
 const main_url = "./main.html";
-var user_data = {};
 window.onload = function() {
+    let user_data_json;
     document.getElementById("cancel").onclick = function() {
         window.location.href = cancel_url;
     };
@@ -17,11 +17,26 @@ window.onload = function() {
         if (email == "") { alert("请输入Email"); return;}
         if (password1 != password2) { alert("请重新确认密码"); return;}
         else {
-            user_data["username"] = username;
-            user_data["password"] = password2;
-            user_data["email"] = email;
-            window.location.href = main_url;
-            alert("保存成功!\n正在转跳...\n");
+            user_data_json = JSON.stringify({
+                username: username,
+                password: password2,
+                email: email
+            });
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function(){
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    if (xmlhttp.responseText == "Successfully!") {
+                        window.location.href = main_url;
+                        alert("注册成功!\n正在转跳...\n");
+                    }
+                }
+            }
+            xmlhttp.open("POST", "../php/register.php", true);
+            xmlhttp.send(user_data_json);
         }
     };
 };
