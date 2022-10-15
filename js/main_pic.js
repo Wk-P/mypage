@@ -2,8 +2,8 @@ var z_index = ["3", "2", "1"];
 var pic_opacity = ["1", "0.75", "0.75"];
 var picture_id = ["#p1", "#p2", "#p3"];
 var picture_width_size = ["90%","75%","75%"];
-var picture_top = ["120px", "30px", "400px"];
-var picture_left = ["120px", "30px", "400px"];
+var picture_top = ["120px", "30px", "375px"];
+var picture_left = ["120px", "30px", "375px"];
 var index = 0;
 function leftButton() {
     var j = index+2;
